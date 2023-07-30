@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../components/Navbar';
 
 const DataArrayPage = () => {
   const [dataArray, setDataArray] = useState([]);
@@ -16,7 +15,13 @@ const DataArrayPage = () => {
 
   return (
     <div>
-       <Navbar />
+    <h2>Second Item:</h2>
+    <ul>
+      {dataArray.length >= 2 && <li>{item[1].name}</li>}
+    </ul>
+  </div>
+    );
+  {/* <div>
       <h1>Data from JSON Array</h1>
       {dataArray.length > 0 ? (
         dataArray.map((item, index) => (
@@ -34,9 +39,8 @@ const DataArrayPage = () => {
       ) : (
         <p>Loading data...</p>
       )}
-    </div>
-  );
+      </div>
+  );*/}
 };
 
 export default DataArrayPage;
-
