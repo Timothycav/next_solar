@@ -86,55 +86,84 @@ const Items = () => {
     <Image src="/images/geology-venus.png" alt="venus" className={`${styles.geopix} ${styles.hide}`}  width={380} height={380} />
       <div className={styles.grid_side}>
         <div className={styles.side_text}>
-      <h1 className={styles.earth_text}>Venus</h1>
-      <ul>
+       <h1 className={styles.earth_text}>Venus</h1>
        
-        {data.length >= 2 && <li  className={styles.over } >{data[1].overview.content}</li>}
-        {data.length >= 2 && <li className={`${styles.inter} ${styles.hide}`}>{data[1].structure.content}</li>}
-        {data.length >= 2 && <li  className={`${styles.surface} ${styles.hide}`}>{data[1].geology.content}</li>}
-
-
-        {data.length >= 2 && <li>{data[1].rotation}</li>}
-        {data.length >= 2 && <li>{data[1].revolution}</li>}
-        {data.length >= 2 && <li>{data[1].radius}</li>}
-        {data.length >= 2 && <li>{data[1].temperature}</li>}
-        
-
-      </ul>
-      </div>
+       
+        {data.length >= 2 && <p  className={styles.over } >{data[1].overview.content}</p>}
+        {data.length >= 2 && <p className={`${styles.inter} ${styles.hide}`}>{data[1].structure.content}</p>}
+        {data.length >= 2 && <p  className={`${styles.surface} ${styles.hide}`}>{data[1].geology.content}</p>}
+       
+       </div>
      
-      <div className={styles.panels}>
+       <div className={styles.panels}>
      
-     <div className={styles.one}  onMouseOver={myMouseOver} >
-      <span className={styles.num}>01 </span> 
+       <div className={styles.one}  onMouseOver={myMouseOver} >
+       <span className={styles.num}>01 </span> 
       Overview
-      </div>
-    <div className={styles.two}  onMouseOver={myMouseOver2}  >
+       </div>
+       <div className={styles.two}  onMouseOver={myMouseOver2}  >
     
       <span className={styles.num}>02 </span> 
       Internal Structure
-    </div>
-    <div className={styles.three} onMouseOver={myMouseOver3} >
+        </div>
+       <div className={styles.three} onMouseOver={myMouseOver3} >
       <span className={styles.num}>03 </span>
       Surface Geology
+      </div>
+     </div>
+      </div>
+      </div>
+  
+        
+  
     
+   <div className={styles.end}> 
+  <div className={styles.box_one}>
+    <div className={styles.box_one_content}>
+      <div className={styles.box_one_content_title}>
+        Rotation Time
+      </div>
+      <div className={styles.box_one_content_text}>
+      {data.length >= 2 && data[1].rotation}
+      </div>
     </div>
-    
+  </div>
+  <div className={styles.box_two}>
+    <div className={styles.box_two__content}>
+      <div className={styles.box_two__content__title}>
+        Revolution Time
+      </div>
+      <div className={styles.box_two__content__text}>
+      {data.length >= 2 && data[1].revolution}
+      </div>
+    </div>
+  </div>
+  <div className={styles.box_three}>
+    <div className={styles.box_three__content}>
+      <div className={styles.box_three__content__title}>
+        Radius
+      </div>
+      <div className={styles.box_three__content__text}>
+      {data.length >= 2 && data[1].radius}
+      </div>
+    </div>
+  </div>
+  <div className={styles.box_four}>
+    <div className={styles.box_four__content}>
+      <div className={styles.box_four__content__title}>
+        Average Temp.
+      </div>
+      <div className={styles.box_four__content__text}>
+      {data.length >= 2 && data[1].temperature}
+      </div>
     </div>
   
+</div>
+</div>
 
-     
-  </div>
-  </div>
+
     
- 
-
-     
-
-   
-
-    </>
-  
+  </>
   );
   };
 
