@@ -11,8 +11,15 @@ const Navbar = () => {
       <Link href="/">
             <li>Home</li>
           </Link>
+          <Link href="/mercury">
+            <li>Mercury</li>
+          </Link>
+       
           <Link href="/venus">
             <li>Venus</li>
+          </Link>
+          <Link href="/earth">
+            <li>Earth</li>
           </Link>
        
       </ul>

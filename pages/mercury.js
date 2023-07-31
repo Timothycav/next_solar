@@ -81,17 +81,17 @@ const Items = () => {
     <>
     <Navbar />
     <div className= {styles.grid_container }>
-    <Image src="/images/planet-earth.svg" alt="venus" className={styles.mainEarth}  width={380} height={380} /> 
-    <Image src="/images/planet-earth-internal.svg" alt="venus" className={`${styles.inpix} ${styles.hide}`}  width={380} height={380} /> 
-    <Image src="/images/geology-earth.png" alt="venus" className={`${styles.geopix} ${styles.hide}`}  width={380} height={380} />
+    <Image src="/images/planet-mercury.svg" alt="venus" className={styles.mainEarth}  width={380} height={380} /> 
+    <Image src="/images/planet-mercury-internal.svg" alt="venus" className={`${styles.inpix} ${styles.hide}`}  width={380} height={380} /> 
+    <Image src="/images/geology-mercury.png" alt="venus" className={`${styles.geopix} ${styles.hide}`}  width={380} height={380} />
       <div className={styles.grid_side}>
         <div className={styles.side_text}>
-       <h1 className={styles.earth_text}>Earth</h1>
+       <h1 className={styles.earth_text}>Mercury</h1>
        
        
-        {data.length >= 2 && <p  className={styles.over } >{data[2].overview.content}</p>}
-        {data.length >= 2 && <p className={`${styles.inter} ${styles.hide}`}>{data[2].structure.content}</p>}
-        {data.length >= 2 && <p  className={`${styles.surface} ${styles.hide}`}>{data[2].geology.content}</p>}
+        {data.length >= 2 && <p  className={styles.over } >{data[0].overview.content}</p>}
+        {data.length >= 2 && <p className={`${styles.inter} ${styles.hide}`}>{data[0].structure.content}</p>}
+        {data.length >= 2 && <p  className={`${styles.surface} ${styles.hide}`}>{data[0].geology.content}</p>}
        
        </div>
      
@@ -124,7 +124,7 @@ const Items = () => {
         Rotation Time
       </div>
       <div className={styles.box_one_content_text}>
-      {data.length >= 2 && data[2].rotation}
+      {data.length >= 2 && data[0].rotation}
       </div>
     </div>
   </div>
@@ -134,7 +134,7 @@ const Items = () => {
         Revolution Time
       </div>
       <div className={styles.box_two__content__text}>
-      {data.length >= 2 && data[2].revolution}
+      {data.length >= 2 && data[0].revolution}
       </div>
     </div>
   </div>
@@ -144,7 +144,7 @@ const Items = () => {
         Radius
       </div>
       <div className={styles.box_three__content__text}>
-      {data.length >= 2 && data[2].radius}
+      {data.length >= 2 && data[0].radius}
       </div>
     </div>
   </div>
@@ -154,7 +154,7 @@ const Items = () => {
         Average Temp.
       </div>
       <div className={styles.box_four__content__text}>
-      {data.length >= 2 && data[2].temperature}
+      {data.length >= 2 && data[0].temperature}
       </div>
     </div>
   
