@@ -92,7 +92,7 @@ const Items = () => {
         {data.length >= 2 && <p  className={styles.over } >{data[4].overview.content}</p>}
         {data.length >= 2 && <p className={`${styles.inter} ${styles.hide}`}>{data[4].structure.content}</p>}
         {data.length >= 2 && <p  className={`${styles.surface} ${styles.hide}`}>{data[4].geology.content}</p>}
-       
+        Source : Wikipedia 
        </div>
      
        <div className={styles.panels}>
