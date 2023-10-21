@@ -8,9 +8,7 @@ const Navbar = () => {
      
     <div className={styles.headerNav}>
       <ul>
-      <Link href="/">
-            <li>Home</li>
-          </Link>
+    
           <Link href="/mercury">
             <li>Mercury</li>
           </Link>
@@ -18,7 +16,7 @@ const Navbar = () => {
           <Link href="/venus">
             <li>Venus</li>
           </Link>
-          <Link href="/earth">
+          <Link href="/">
             <li>Earth</li>
           </Link>
           <Link href="/mars">
