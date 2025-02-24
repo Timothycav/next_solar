@@ -82,7 +82,7 @@ margin-top: 4rem;
   margin-left: 12rem;
   margin-top: 4rem;
  }
- #marsPix {
+ .marsPix {
   margin-left: 12rem;
   margin-top: 4rem;
 
@@ -132,4 +132,130 @@ margin-right: 3rem;
   text-align: center;
   
  
+}
+
+/* Navbar container */
+.navbar {
+ 
+  padding: 15px 20px;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/* Flex container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+/* Navigation Links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin: 0 15px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: #ff9800;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+      display: block;
+      
+  }
+
+  .navLinks {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .navLinks.show {
+      display: flex;
+  }
+
+  .navLinks li {
+      margin: 10px 0;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 90vw;
+    place-items: center;
+    
+  }
+  .mainEarth, .inpix {
+   
+    margin: 0;
+  }
+ 
+  
+  .side_text {
+    margin-bottom: 0;
+  }
+  .grid_side {
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .geopix {
+    left: 0;
+    bottom: 0;
+    width: 10%;
+    height: 10%;
+  }
+  .end {
+    grid-template-columns: 1fr;
+  }
+  .end > div {
+    margin-bottom: 1rem;
+  }
+  .headerContainer, .headerNav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+   
+  }
 }

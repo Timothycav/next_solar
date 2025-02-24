@@ -1,37 +1,43 @@
+import { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className={styles.headerContainer}>
+    <div className={styles.navbar}>
      
-    <div className={styles.headerNav}>
-      <ul>
+    <div className={styles.contianer}>
+     {/* Hamburger Icon */}
+     <button className={styles.hamburger} onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? "✖" : "☰"}
+                </button>
+      <ul className={`${styles.navLinks} ${isOpen ? styles.show : ""}`}>
     
-          <Link href="/mercury">
-            <li>Mercury</li>
-          </Link>
+      <li><Link href="/mercury" onClick={() => setIsOpen(false)}>
+           Mercury
+          </Link></li>
        
           <Link href="/venus">
             <li>Venus</li>
           </Link>
-          <Link href="/">
+          <Link href="/" onClick={() => setIsOpen(false)}>
             <li>Earth</li>
           </Link>
-          <Link href="/mars">
+          <Link href="/mars"  onClick={() => setIsOpen(false)}>
             <li>Mars</li>
           </Link>
-          <Link href="/jupiter">
+          <Link href="/jupiter" onClick={() => setIsOpen(false)}>
             <li>Jupiter</li>
           </Link>
-          <Link href="/saturn">
+          <Link href="/saturn" onClick={() => setIsOpen(false)}>
             <li>Saturn</li>
           </Link>
-          <Link href="/uranus">
+          <Link href="/uranus" onClick={() => setIsOpen(false)}>
             <li>Uranus</li>
           </Link>
-          <Link href="/neptune">
+          <Link href="/neptune" onClick={() => setIsOpen(false)}>
             <li>Neptune</li>
           </Link>
       </ul>

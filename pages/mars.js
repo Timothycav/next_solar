@@ -81,9 +81,9 @@ const Items = () => {
     <>
     <Navbar />
     <div className= {styles.grid_container }>
-    <Image src="/images/planet-mars.svg" alt="venus" className={styles.mainEarth}  width={380} height={380} /> 
-    <Image src="/images/planet-mars-internal.svg" alt="venus" className={`${styles.inpix} ${styles.hide}`}  width={285} height={285} /> 
-    <Image src="/images/geology-mars.png" alt="venus" className={`${styles.geopix} ${styles.hide}`}  width={380} height={380} />
+    <Image src="/images/planet-mars.svg" alt="mars" className={styles.mainEarth}  width={380} height={380} /> 
+    <Image src="/images/planet-mars-internal.svg" alt="mars" className={`${styles.inpix} ${styles.hide}`}  width={280} height={280} /> 
+    <Image src="/images/geology-mars.png" alt="mars" className={`${styles.geopix} ${styles.hide}`}  width={380} height={380} />
       <div className={styles.grid_side}>
         <div className={styles.side_text}>
        <h1 className={styles.earth_text}>Mars</h1>
